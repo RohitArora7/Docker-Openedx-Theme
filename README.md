@@ -8,9 +8,9 @@ Lets talk about index_overlay.html (It works! Powered by Open edX®)
 
 _openedx/edx-platform/lms/templates_
 
-Now we have to update the theme (Indigo Theme)(The place for all your online learning)
+Now we have to update the theme -Indigo Theme (The place for all your online learning)
 
----- Updated them location will be 
+---- Updated location will be 
 
 _/openedx/themes/indigo/lms/templates_
 
@@ -57,8 +57,10 @@ cd /openedx/themes/indigo/lms/templates
 vim index_overlay.html
 ```
 
-
-
+To Revert back to original open edx theme
+```bash
+tutor local settheme default $(tutor config printvalue LMS_HOST) $(tutor config printvalue CMS_HOST)
+```
 
 
 
