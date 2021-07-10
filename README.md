@@ -25,9 +25,9 @@ git clone https://github.com/overhangio/indigo
 ```bash
 tutor config render --extra-config ./indigo/config.yml ./indigo/theme "$(tutor config printroot)/env/build/openedx/themes/indigo"
 ```
-Files goes to tutor location 
+   Files goes to tutor location 
 
-_/home/rohit/.local/share/tutor/env/build/openedx/themes/indigo/lms/templates_
+   _/home/rohit/.local/share/tutor/env/build/openedx/themes/indigo/lms/templates_
 
 3. Rebuild open edx image only 
 ```bash
