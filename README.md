@@ -32,7 +32,9 @@ tutor config render --extra-config ./indigo/config.yml ./indigo/theme "$(tutor c
 3. Rebuild open edx image only 
 ```bash
 tutor local stop
+docker container prune -f 
 tutor images build openedx
+tutor local start
 ```
 4.  Restart platform
 ```bash
@@ -42,3 +44,23 @@ tutor local start -d
 ```bash
 tutor local settheme indigo $(tutor config printvalue LMS_HOST) $(tutor config printvalue CMS_HOST)
 ```
+
+Now Direct Edit Part 
+
+Go to bash mode of the new lms container
+```bash
+docker exec -it  tutor_local_lms_1 bash
+```
+Now go to indigo theme folder which is just created and edit files 
+```bash
+cd /openedx/themes/indigo/lms/templates
+vim index_overlay.html
+```
+
+
+
+
+
+
+
+
